@@ -1,0 +1,329 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+
+// VARS
+// Colors
+$primary-color: #3b82f6;
+$secondary-color: #64748b;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Spacing
+$spacing-base: 1rem;
+$spacing-lg: 2rem;
+$spacing-xl: 4rem;
+
+.introButton {
+  background: url(../imgs/intro-button-01.png) no-repeat scroll center center
+    transparent;
+  background-size: contain;
+}
+.opinionEliteButton {
+  background: url(../imgs/opinion-elite-button.png) no-repeat scroll 0px 2px
+    transparent;
+  background-size: contain;
+}
+.clientBox {
+  border: 2px solid red;
+  border-radius: 10px;
+  border-image: linear-gradient(to bottom, #1244ac, rgba(0, 0, 0, 0.25)) 30;
+}
+
+body {
+  overflow-x: hidden;
+}
+.omegaWrapper {
+  /* width: 1920px;
+  position: absolute;
+  top: 0;
+  left: 50%; */
+  transform-origin: 0 0;
+}
+.nav {
+  transition: transform 0.3s ease-in-out, position 0.3s ease-in-out;
+  will-change: transform, position;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #aab6f2;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #8594d4;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #aab6f2 black;
+}
+
+.clientsSlider {
+  width: 100%;
+  overflow: visible !important;
+  margin: 0 auto;
+}
+
+.clientsSlider .swiper-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.clientsSlider .swiper-slide {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Ensure slides maintain visibility */
+.clientsSlider .swiper-slide-visible {
+  visibility: visible !important;
+}
+
+.trustedby .wrapper {
+  background: radial-gradient(ellipse at center, #092865 0%, transparent 70%);
+  background-size: auto 100%;
+}
+
+@keyframes socialIconFade {
+  0%,
+  45% {
+    opacity: 1;
+  }
+  50%,
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.social-icon {
+  opacity: 0;
+  animation: socialIconFade 4s infinite;
+}
+
+.social-icon.linkedin {
+  animation-delay: 0s;
+}
+
+.social-icon.facebook {
+  animation-delay: 2s;
+}
+
+.teamCard span img {
+  border-radius: 18px;
+  overflow: hidden;
+  filter: sepia(11%) saturate(310%) hue-rotate(44deg) brightness(86%);
+}
+
+.inactive-logo g > * {
+  fill: #4595e5 !important;
+}
+
+#preloader {
+  transition: opacity 0.3s ease-in-out;
+}
+@media screen {
+  @media (max-width: 1024px) {
+    .globCovList {
+      padding-bottom: 14%;
+    }
+    .dataQualityContent {
+      background: url(../imgs/global-coverage-bg.png) no-repeat scroll center
+        top transparent;
+      background-size: 110% auto;
+    }
+    .researchMobile {
+      background: linear-gradient(180deg, transparent, #3648b1 40%);
+    }
+    .olPhoneBg {
+      background: url(../imgs/opinion-elite-figure-centered.png) no-repeat
+        scroll center center transparent;
+      background-size: auto 100%;
+    }
+
+    .olPhoneBg2 {
+      background: url(../imgs/opinion-elite-bg-rectangle.png) no-repeat scroll
+        center center transparent;
+      background-size: auto 100%;
+    }
+    .rsBoxBg {
+      background: url(../imgs/research-services-box-mob.png) no-repeat scroll
+        center top transparent;
+      background-size: 120% auto;
+      .global,
+      .survey,
+      .qd {
+        /* background: url(../imgs/research-services-box-inner-mob.png) no-repeat scroll center top transparent;
+                background-size: 100% auto; */
+
+        background-image: radial-gradient(#2d3d8d 2px, transparent 2px),
+          radial-gradient(#2d3d8d 2px, transparent 2px),
+          linear-gradient(to bottom, #2c3a90, #1c234e);
+        background-size: 15px 15px, 15px 15px, 100% 100%;
+        background-position: 0 0, 7px 7px, 0 0;
+        border: 3px solid #2f45a5;
+        border-radius: 25px;
+        box-shadow: 0 0px 2px 4px #000;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .squareIcon {
+        background-image: linear-gradient(to bottom, #526ed5, #3648a8);
+
+        border-radius: 10px;
+        box-shadow: 0 0px 2px 4px #000, 0 0 0 3px #3b56ce;
+      }
+    }
+    .advEngBg {
+      background: linear-gradient(165deg, #2430b2 3%, #29cca3);
+      border-radius: 32px;
+      box-shadow: inset 0 0 25px rgb(251 247 202 / 50%);
+      padding: 40px;
+    }
+    .globalCoverage {
+      .countriesList {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .americasApac,
+      .emea {
+        max-width: 750px;
+      }
+    }
+    .industries {
+      .household,
+      .b2b {
+        background: url(../imgs/industries-household-box.png) no-repeat scroll
+          center center transparent;
+        background-size: auto 100%;
+        margin: 0 auto;
+        height: 500px;
+        max-width: 100%;
+        padding-top: 5rem;
+      }
+    }
+    .swiper-slide-active .company {
+      height: 140px !important;
+    }
+    .clientBox {
+      height: 120px !important;
+    }
+
+    .testimonialBox .content::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .testimonialBox .content::-webkit-scrollbar-track {
+      background: rgba(13, 49, 126, 0.25);
+      border-radius: 4px;
+    }
+
+    .testimonialBox .content::-webkit-scrollbar-thumb {
+      background: #65398f;
+      border-radius: 4px;
+    }
+
+    .testimonialBox .content::-webkit-scrollbar-thumb:hover {
+      background: #65398f;
+    }
+
+    /* Firefox */
+    .testimonialBox .content {
+      scrollbar-width: thin;
+      scrollbar-color: #65398f rgba(13, 49, 126, 0.25);
+    }
+
+    .teamList {
+      grid-template-columns: 1fr 1fr;
+    }
+    .teamCard span img {
+      border-radius: 9px;
+    }
+    .nav.open {
+      backdrop-filter: blur(16px) !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .globCovList {
+      padding-bottom: 7%;
+    }
+    .globalCoverage {
+      .countriesList {
+        grid-template-columns: 1fr 1fr;
+      }
+      .americasApac,
+      .emea {
+        max-width: 500px;
+      }
+    }
+    .industries {
+      .household,
+      .b2b {
+        ul {
+          font-size: 10px;
+        }
+        height: max-content;
+      }
+    }
+    .swiper-slide-active .company {
+      height: 120px !important;
+    }
+    .clientBox {
+      height: 100px !important;
+    }
+    .teamList {
+      grid-template-columns: 1fr;
+    }
+    .leadershipWrapper {
+      background: url(../imgs/leadership-teamlist-bg.png) no-repeat scroll
+        center 300px transparent;
+      background-size: auto 75%;
+      z-index: 0;
+    }
+    .leadershipWrapperImg {
+      display: none;
+    }
+  }
+  @media (max-width: 500px) {
+    .globCovList {
+      padding-bottom: 4%;
+    }
+    .industries {
+      .household,
+      .b2b {
+        video {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

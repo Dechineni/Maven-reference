@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: "Inter";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  src: url("../fonts/InterVariable.woff2") format("woff2");
+}
+.introButton {
+  background: url(../imgs/intro-button-01.png) no-repeat scroll center center transparent;
+  background-size: contain;
+}
+
+.opinionEliteButton {
+  background: url(../imgs/opinion-elite-button.png) no-repeat scroll 0px 2px transparent;
+  background-size: contain;
+}
+
+.clientBox {
+  border: 2px solid red;
+  border-radius: 10px;
+  -o-border-image: linear-gradient(to bottom, #1244ac, rgba(0, 0, 0, 0.25)) 30;
+     border-image: linear-gradient(to bottom, #1244ac, rgba(0, 0, 0, 0.25)) 30;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.omegaWrapper {
+  width: 1920px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform-origin: 0 0;
+}
+
+.nav {
+  transition: transform 0.3s ease-in-out, position 0.3s ease-in-out;
+  will-change: transform, position;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #AAB6F2;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #8594D4;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #AAB6F2 black;
+}
+
+.clientsSlider {
+  width: 100%;
+  overflow: visible !important;
+  margin: 0 auto;
+}
+
+.clientsSlider .swiper-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.clientsSlider .swiper-slide {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Ensure slides maintain visibility */
+.clientsSlider .swiper-slide-visible {
+  visibility: visible !important;
+}
+
+@keyframes socialIconFade {
+  0%, 45% {
+    opacity: 1;
+  }
+  50%, 95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.social-icon {
+  opacity: 0;
+  animation: socialIconFade 4s infinite;
+}
+
+.social-icon.linkedin {
+  animation-delay: 0s;
+}
+
+.social-icon.facebook {
+  animation-delay: 2s;
+}
+
+.teamCard span img {
+  border-radius: 18px;
+  overflow: hidden;
+  filter: sepia(11%) saturate(310%) hue-rotate(44deg) brightness(86%);
+}/*# sourceMappingURL=main.css.map */
