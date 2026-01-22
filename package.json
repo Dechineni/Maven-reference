@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-sass-project",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "touch dist/.nojekyll && gh-pages -d dist -r https://github.com/capagris/quantifyai-website.git --cname quantifyai.co"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.2.0",
+    "postcss": "^8.4.31",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.5",
+    "vite": "^5.0.0"
+  }
+}
