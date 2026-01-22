@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 300 300">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#021e55;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#021e55;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rectangle with gradient -->
+  <rect x="-150" y="-150" width="300" height="300" fill="url(#bgGradient)"/>
+  
+  <!-- Rest of the elements -->
+  <path d="M -150 150 Q 0 75 150 150" fill="none" stroke="#0066cc" stroke-width="1" opacity="0.3"/>
+  <line x1="0" y1="-150" x2="0" y2="320" stroke="#0066cc" stroke-width="1" opacity="0.3"/>
+  <path d="M 0 -110 L -130 0 L 130 0 Z" fill="none" stroke="#0066cc" stroke-width="1" opacity="0.3"/>
+  
+  <defs>
+    <mask id="donutMask">
+      <rect x="-150" y="-150" width="300" height="300" fill="white"/>
+      <circle cx="0" cy="30" r="30" fill="black"/>
+    </mask>
+  </defs>
+  
+  <circle cx="0" cy="30" r="70" fill="url(#hatch)" stroke="#0066cc" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" mask="url(#donutMask)"/>
+  <circle cx="0" cy="30" r="30" fill="none" stroke="#0066cc" stroke-width="1" opacity="0.3"/>
+  <path d="M 0 -80 L -346.4 320 L 346.4 320 Z" fill="none" stroke="#0066cc" stroke-width="1" stroke-dasharray="5,5" opacity="0.3"/>
+  <line x1="-346.4" y1="135" x2="346.4" y2="135" stroke="#0066cc" stroke-width="1" opacity="0.3"/>
+  
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#0066cc" stroke-width="1"/>
+    </pattern>
+  </defs>
+</svg>
